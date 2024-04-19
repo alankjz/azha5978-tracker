@@ -2,16 +2,19 @@
   "name": "demorepo",
   "version": "1.0.0",
   "description": "a demonstration",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "sass": "^1.75.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
   }
-  
 }
-
