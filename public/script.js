@@ -51,7 +51,7 @@ function displayTask(task) {
   item.setAttribute("data-id", task.id);
     
     // Populate the list item with task data using template literals
-    item.innerHTML = `<p><strong>${task.word}</strong><br>Language: ${task.language}<br>Type: $${task.type}/hr<br>Definition: ${task.definition} hours<br>Confidence Level: ${task.confidenceLevel}</p>`;
+    item.innerHTML = `<p><strong>${task.word}</strong><br>Language: ${task.language}<br>Type: ${task.type}<br>Definition: ${task.definition}<br>Confidence Level: ${task.confidenceLevel}</p>`;
     
      // Setup delete button DOM element
   let delButton = document.createElement("button");
