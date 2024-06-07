@@ -8,8 +8,71 @@
     <link rel="stylesheet" href = "scss/main.scss">
 </head>
 <body>
-    <p>
-        hihi
-    </p>
-</body>
+    <!-- Container for the entire content -->
+    <div class="container">
+      <!-- Header section -->
+      <header>
+        <!-- Title of the application -->
+        <h1>Word Tracker</h1>
+      </header>
+  
+      <!-- Form to capture task data -->
+      <form id="taskForm">
+        <!-- Input field for task name -->
+        <div class="form-row">
+          <label for="wordWord">Name</label>
+          <input type="text" name="wordWord" id="wordWord" required="true" />
+        </div>
+
+         <!-- Input field for task name -->
+         <div class="form-row">
+            <label for="wordLanguage">Name</label>
+            <input type="text" name="wordLanguage" id="wordLanguage" required="true" />
+          </div>
+
+            <!-- Dropdown select for task type -->
+            <div class="form-row">
+            <label for="wordType">Type</label>
+            <select name="wordType" id="wordType" required="true">
+              <option value="">Select Type</option>
+              <option value="Verb">Verb</option>
+              <option value="Adjective">Adjective</option>
+              <option value="Noun">Noun</option>
+            </select>
+             </div>
+      
+        <!-- Input field for task client -->
+        <div class="form-row">
+          <label for="wordDefinition">Client</label>
+          <input type="text" name="wordDefinition" id="wordDefinition" required="true" />
+        </div>
+
+          <!-- Dropdown select for task type -->
+          <div class="form-row">
+            <label for="wordCL">Type</label>
+            <select name="wordCL" id="wordCL" required="true">
+              <option value="">Select Type</option>
+              <option value="Very Low">Very Low</option>
+              <option value="Low">Low</option>
+              <option value="Average">Average</option>
+              <option value="High">High</option>
+              <option value="Very High">Very High</option>
+            </select>
+          </div>
+    
+
+        <!-- Submit button to add task -->
+        <div class="form-row">
+          <input type="submit" value="Add Task">
+        </div>
+      </form>
+  
+      <!-- Section to display tasks -->
+      <h2>Tasks</h2>
+      <ul id="taskList"></ul>
+    </div>
+  
+    <!-- JavaScript file for handling form submission and task display -->
+    <script src="script.js"></script>
+  </body>
 </html>
