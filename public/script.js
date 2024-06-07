@@ -1,7 +1,7 @@
 // Variables to keep track of form and task list elements
 let form = document.getElementById("taskForm");
 let taskList = document.getElementById("taskList");
-let task = [];
+let tasks = [];
 // Event listener for form submission
 form.addEventListener("submit", function(event) {
   // Prevent the default form submission behavior
@@ -21,7 +21,7 @@ form.addEventListener("submit", function(event) {
   addTask(word, language, type, definition, confidenceLevel);
   
   // Log the updated task list array
-  console.log(task);
+  console.log(tasks);
 });
 
 // Function to add task to task list
@@ -37,7 +37,7 @@ function addTask(word, language, type, definition, confidenceLevel) {
     
   };
   
-  task.push(newTask);
+  tasks.push(newTask);
 
   displayTask(newTask);
 }
@@ -65,10 +65,10 @@ function displayTask(task) {
     item.remove();
     
     // Filter out the element corresponding with the list item and store the new task list
-    taskList = taskList.filter(task => task.id !== parseInt(item.getAttribute("data-id")));
+    tasks = tasks.filter(task => task.id !== parseInt(item.getAttribute("data-id")));
     
     // Log the updated task list array
-    console.log(task);
+    console.log(tasks);
 
 
   
