@@ -1,7 +1,7 @@
 // Variables to keep track of form and task list elements
-const form = document.getElementById("taskForm");
-const taskList = document.getElementById("taskList");
-
+let form = document.getElementById("taskForm");
+let taskList = document.getElementById("taskList");
+let task = [];
 // Event listener for form submission
 form.addEventListener("submit", function(event) {
   // Prevent the default form submission behavior
@@ -14,14 +14,14 @@ form.addEventListener("submit", function(event) {
   const word = formElements.wordWord.value;
   const language = formElements.wordLanguage.value;
   const type = formElements.wordType.value;
-  const definition = formElements.wordDefintion.value;
+  const definition = formElements.wordDefinition.value;
   const confidenceLevel = formElements.wordCL.value;
   
   // Call addTask function with form values
   addTask(word, language, type, definition, confidenceLevel);
   
   // Log the updated task list array
-  console.log(taskList);
+  console.log(task);
 });
 
 // Function to add task to task list
@@ -37,7 +37,7 @@ function addTask(word, language, type, definition, confidenceLevel) {
     
   };
   
-  taskList.push(newTask);
+  task.push(newTask);
 
   displayTask(newTask);
 }
@@ -68,7 +68,7 @@ function displayTask(task) {
     taskList = taskList.filter(task => task.id !== parseInt(item.getAttribute("data-id")));
     
     // Log the updated task list array
-    console.log(taskList);
+    console.log(task);
 
 
   

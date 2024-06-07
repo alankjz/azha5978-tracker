@@ -20,19 +20,19 @@
       <form id="taskForm">
         <!-- Input field for task name -->
         <div class="form-row">
-          <label for="wordWord">Name</label>
+          <label for="wordWord">Word</label>
           <input type="text" name="wordWord" id="wordWord" required="true" />
         </div>
 
          <!-- Input field for task name -->
          <div class="form-row">
-            <label for="wordLanguage">Name</label>
+            <label for="wordLanguage">Language</label>
             <input type="text" name="wordLanguage" id="wordLanguage" required="true" />
           </div>
 
             <!-- Dropdown select for task type -->
             <div class="form-row">
-            <label for="wordType">Type</label>
+            <label for="wordType">Word Type</label>
             <select name="wordType" id="wordType" required="true">
               <option value="">Select Type</option>
               <option value="Verb">Verb</option>
@@ -43,13 +43,13 @@
       
         <!-- Input field for task client -->
         <div class="form-row">
-          <label for="wordDefinition">Client</label>
+          <label for="wordDefinition">Definition</label>
           <input type="text" name="wordDefinition" id="wordDefinition" required="true" />
         </div>
 
           <!-- Dropdown select for task type -->
           <div class="form-row">
-            <label for="wordCL">Type</label>
+            <label for="wordCL">Confidence Level</label>
             <select name="wordCL" id="wordCL" required="true">
               <option value="">Select Type</option>
               <option value="Very Low">Very Low</option>
@@ -63,12 +63,12 @@
 
         <!-- Submit button to add task -->
         <div class="form-row">
-          <input type="submit" value="Add Task">
+          <input type="submit" value="Add Word">
         </div>
       </form>
   
       <!-- Section to display tasks -->
-      <h2>Tasks</h2>
+      <h2>Word Bank</h2>
       <ul id="taskList"></ul>
     </div>
   
