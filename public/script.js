@@ -14,6 +14,7 @@ form.addEventListener("submit", function(event) {
   const confidenceLevel = formElements.wordCL.value;
   
   addTask(word, language, type, definition, confidenceLevel);
+  console.log(tasks);
 });
 
 function addTask(word, language, type, definition, confidenceLevel) {
@@ -48,6 +49,9 @@ function displayTask(task) {
   delButton.addEventListener("click", function(event) {
     item.remove();
     tasks = tasks.filter(task => task.id !== parseInt(item.getAttribute("data-id")));
+
+    console.log(tasks);
+
   });
 
     wordList.appendChild(item);
@@ -70,3 +74,4 @@ document.addEventListener('DOMContentLoaded', function() {
   const logButton = document.querySelector('.log-button');
   logButton.addEventListener('click', logWord);
 });
+
