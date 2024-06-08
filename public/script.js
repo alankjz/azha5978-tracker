@@ -63,7 +63,7 @@ function saveTasksToLocalStorage(tasks) {
   // Get the existing tasks from local storage
   const newTask = JSON.parse(localStorage.getItem('newTasks')) || [];
   // Add new task to the array
-  tasks.push(tasks);
+  newTask.push(tasks);
   // Save back to local storage
   localStorage.setItem('newTask', JSON.stringify(newTask));
 }
