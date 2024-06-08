@@ -64,3 +64,9 @@ function logWord() {
         alert('Please enter a word to log.');
     }
 }
+
+// Attach event listener to the button
+document.addEventListener('DOMContentLoaded', function() {
+  const logButton = document.querySelector('.log-button');
+  logButton.addEventListener('click', logWord);
+});
