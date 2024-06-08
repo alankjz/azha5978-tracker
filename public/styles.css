@@ -1,14 +1,16 @@
+/* Define custom font JoSa */
 @font-face {
   font-family: "JoSa";
   src: url("Josefin_Sans/JosefinSans-VariableFont_wght.ttf") format("truetype"); 
 }
 
-
+/* Define custom font JoSaItalic */
 @font-face {
   font-family: "JoSaItalic";
   src: url("Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype"); 
 }
 
+/* General HTML styling */
 html {
   height: 100%;
   width: 100%;
@@ -17,10 +19,12 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Header h1 styling */
 header > h1 {
   text-align: center;
 }
 
+/* Form styling */
 form {
   max-width: 31.25em;
   margin: 0 auto;
@@ -28,6 +32,7 @@ form {
   padding: 2em 1em;
 }
 
+/* Form row styling */
 .form-row {
   display: flex;
   justify-content: flex-end;
@@ -43,6 +48,7 @@ form {
   flex-grow: 1;
 }
 
+/* Main page styling */
 .mainpage {
   width: 100vw;
   height: 100vh;
@@ -57,7 +63,7 @@ form {
   margin-right: -0.625vw; 
 }
 
-
+/* Header top styling */
 .headertop {
   position: fixed;
   top: 0; 
@@ -73,6 +79,7 @@ form {
   box-sizing: border-box; 
 }
 
+/* Container styling */
 .container {
   width: 100vw;
   height: 70vh;
@@ -85,6 +92,7 @@ form {
   margin-right: -0.625vw; 
 }
 
+/* Logo styling */
 .logo{
   font-family: "JoSaItlaic"; 
   cursor: pointer;
@@ -93,6 +101,7 @@ form {
   font-weight: bolder;
 }
 
+/* Navigation styling */
 .navigation { 
   cursor: pointer;
   font-family: "JoSa";
@@ -107,20 +116,21 @@ form {
   letter-spacing: 0.1em;
 }
 
+/* h1 styling */
 h1 {
   font-family: "JoSa"; 
-  
 }
 
+/* h10 styling */
 h10 {
   font-family: "JoSaItlaic"; 
   cursor: pointer;
   font-size: 15em; 
   color: black;
   font-weight: bolder;
-  
 }
 
+/* Title container styling */
 .title-container {
   display: flex;
   flex-direction: column;
@@ -130,8 +140,7 @@ h10 {
   top: -15vh; 
 }
 
-
-
+/* Search box styling */
 .search-box {
   display: flex;
   align-items: center;
@@ -140,6 +149,7 @@ h10 {
   padding-left: 2em;
 }
 
+/* Search input styling */
 .search-input {
   padding: 1.875vh 3.125vw;
   border: 0.125em solid #6F4E37; 
@@ -150,7 +160,7 @@ h10 {
   outline: none;
 }
 
-
+/* Log button and delete button styling */
 .log-button,
 .delete-button {
   margin-left: 1.25vw;
@@ -171,12 +181,11 @@ h10 {
   background-color: #8a6c28; 
 }
 
-
 .delete-button:not(:hover) {
   background-color: #6F4E37; 
 }
 
-
+/* Word form styling */
 #wordForm {
   width: 35em; 
   height: 34em;
@@ -184,16 +193,14 @@ h10 {
   border: 0.125em  solid #6F4E37; 
   border-radius: 1.25em;
   background-color: #FFF8E7; 
-  
 }
 
-
+/* Additional form row styling */
 .form-row {
   display: flex;
   align-items: flex-start; 
   margin-bottom: 0.625em; 
 }
-
 
 .form-row > label {
   width: 6.25em;
@@ -201,7 +208,7 @@ h10 {
   font-family: "JoSa", Arial, Helvetica, sans-serif; 
 }
 
-
+/* Input and select styling within form row */
 .form-row > input,
 .form-row > select {
   flex-grow: 1;
@@ -213,7 +220,7 @@ h10 {
   outline: none;
 }
 
-
+/* Submit button styling */
 .form-row > input[type="submit"] {
   padding: 1.875vh 3.125vw;
   border: none;
@@ -231,7 +238,7 @@ h10 {
   background-color: #8a6c28; 
 }
 
-
+/* Form title styling */
 .form-title {
   font-family: "JoSa", Arial, Helvetica, sans-serif; 
   font-size: 3em; 
@@ -239,8 +246,7 @@ h10 {
   margin-bottom: 1.25em; 
 }
 
-
-
+/* Word list container styling */
 #wordListContainer {
   width: 65em; 
   height: 36em;
@@ -252,6 +258,7 @@ h10 {
   padding: 1em; 
 }
 
+/* Word list container h2 styling */
 #wordListContainer h2 {
   padding-top: 1em;
   margin-top: 0;
@@ -260,6 +267,7 @@ h10 {
   font-weight: bold; 
 }
 
+/* Word list container ul styling */
 #wordListContainer ul {
   margin-top: 0; 
   padding-left: 1em; 
@@ -268,6 +276,7 @@ h10 {
   text-align: left;
 }
 
+/* Word list container li styling */
 #wordListContainer li {
   padding: 0.5em;
   border-bottom: 0.0625em solid #6F4E37; 
@@ -276,16 +285,19 @@ h10 {
   font-size: 1em;
 }
 
+/* Last child of word list container li styling */
 #wordListContainer li:last-child {
   border-bottom: none;
 }
 
+/* Strong tag within word list container li styling */
 #wordListContainer li strong {
   font-size: 2.5em; 
   margin-right: 1em;
   font-family: "JosaItalic";
 }
 
+/* Word details styling */
 .word-details {
   flex-grow: 1; 
   font-size: 1.2em; 

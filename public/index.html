@@ -3,101 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "styles.css">
-    <link rel="stylesheet" href = "scss/main.scss">
-    <title>Web App Design</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <!-- Linking external CSS files -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- SCSS file will be compiled into CSS -->
+    <link rel="stylesheet" href="scss/main.scss">
+    <title>azha5978-tracker</title>
 </head>
 <body>
-    <div class = "headertop" >
-        <div class ="logo" onclick = "location.href = '#container' " >W</div>
-        <div class = "navigation" onclick = "location.href = '#container' ">Word Bank</div>
-
+    <!-- Header Section -->
+    <div class="headertop">
+        <!-- Logo with link to main content -->
+        <div class="logo" onclick="location.href = '#container'">W</div>
+        <!-- Navigation link to main content -->
+        <div class="navigation" onclick="location.href = '#container'">Word Bank</div>
     </div>
 
-
+    <!-- Main Content Section -->
     <div class="mainpage">
         <div class="title-container">
+            <!-- Logo and main title -->
             <h10>W</h10>
             <h1>Invest in your Word Bank</h1>
+            <!-- Search box for entering new words -->
             <div class="search-box">
                 <input type="text" placeholder="Enter Your Word Here!" class="search-input">
+                <!-- Button to log new words -->
                 <button onclick="logWord()" class="log-button">Log Word</button>
             </div>
         </div>
     </div>
 
-    
-
-    
+    <!-- Word Entry Form and Word Bank Section -->
     <div id="container" class="container">
-  
-      
-      <form id="wordForm">
-        <h2 class="form-title">New Word Entry</h2>
-        
-        <div class="form-row">
-          <label for="wordWord">Word</label>
-          <input type="text" name="wordWord" id="wordWord" required="true" />
-        </div>
+        <!-- Form for entering new words -->
+        <form id="wordForm">
+            <h2 class="form-title">New Word Entry</h2>
+            
+            <!-- Input fields for word details -->
+            <div class="form-row">
+                <label for="wordWord">Word</label>
+                <input type="text" name="wordWord" id="wordWord" required="true" />
+            </div>
 
-         
-         <div class="form-row">
-            <label for="wordLanguage">Language</label>
-            <input type="text" name="wordLanguage" id="wordLanguage" required="true" />
-          </div>
+            <div class="form-row">
+                <label for="wordLanguage">Language</label>
+                <input type="text" name="wordLanguage" id="wordLanguage" required="true" />
+            </div>
 
+            <div class="form-row">
+                <label for="wordType">Word Type</label>
+                <!-- Dropdown for selecting word type -->
+                <select name="wordType" id="wordType" required="true">
+                    <option value="">Select Type</option>
+                    <option value="Verb">Verb</option>
+                    <option value="Adjective">Adjective</option>
+                    <option value="Noun">Noun</option>
+                </select>
+            </div>
             
             <div class="form-row">
-            <label for="wordType">Word Type</label>
-            <select name="wordType" id="wordType" required="true">
-              <option value="">Select Type</option>
-              <option value="Verb">Verb</option>
-              <option value="Adjective">Adjective</option>
-              <option value="Noun">Noun</option>
-            </select>
-             </div>
-      
-        
-        <div class="form-row">
-          <label for="wordDefinition">Definition</label>
-          <input type="text" name="wordDefinition" id="wordDefinition" required="true" />
-        </div>
+                <label for="wordDefinition">Definition</label>
+                <input type="text" name="wordDefinition" id="wordDefinition" required="true" />
+            </div>
 
-          
-          <div class="form-row">
-            <label for="wordCL">Confidence Level</label>
-            <select name="wordCL" id="wordCL" required="true">
-              <option value="">Select Level</option>
-              <option value="Very Low">Very Low</option>
-              <option value="Low">Low</option>
-              <option value="Average">Average</option>
-              <option value="High">High</option>
-              <option value="Very High">Very High</option>
-            </select>
-          </div>
-    
-
+            <div class="form-row">
+                <label for="wordCL">Confidence Level</label>
+                <!-- Dropdown for selecting confidence level -->
+                <select name="wordCL" id="wordCL" required="true">
+                    <option value="">Select Level</option>
+                    <option value="Very Low">Very Low</option>
+                    <option value="Low">Low</option>
+                    <option value="Average">Average</option>
+                    <option value="High">High</option>
+                    <option value="Very High">Very High</option>
+                </select>
+            </div>
         
-        <div class="form-row">
-          <input type="submit" value="Add Word">
-        </div>
-      </form>
-  
-      
+            <!-- Button to submit the form -->
+            <div class="form-row">
+                <input type="submit" value="Add Word">
+            </div>
+        </form>
+        
+        <!-- Section to display the Word Bank -->
         <div id="wordListContainer">
             <h2>Word Bank</h2>
             <ul id="wordList"></ul>
         </div>
-
-
-  
     </div>
 
-    
-  
-    
+    <!-- JavaScript file for dynamic functionality -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
