@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href = "styles.css">
     <link rel="stylesheet" href = "scss/main.scss">
     <title>Web App Design</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <div class = "headertop" >
         <div class ="logo" onclick = "location.href = '#container' " >W</div>
-        <div class = "navigation" onclick = "location.href = '#container' ">WEB APP DESIGN</div>
+        <div class = "navigation" onclick = "location.href = '#container' ">Word Bank</div>
 
     </div>
+
 
     <div class="mainpage">
-        <header>
-            <h1>W</h1>
-        </header>
-
-        <h1>Enter Your Word Here!</h2>
+        <div class="title-container">
+            <h10>W</h10>
+            <h1>Invest in your Word Bank</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Enter Your Word Here!" class="search-input">
+                <button onclick="logWord()" class="log-button">Log Word</button>
+            </div>
+        </div>
     </div>
 
-    <!-- Container for the entire content -->
+    
+
+    
     <div id="container" class="container">
-      <!-- Header section -->
-      <header>
-        <!-- Title of the application -->
-        <h1>Word Tracker</h1>
-      </header>
   
-      <!-- Form to capture task data -->
-      <form id="taskForm">
-        <!-- Input field for task name -->
+      
+      <form id="wordForm">
+        <h2 class="form-title">New Word Entry</h2>
+        
         <div class="form-row">
           <label for="wordWord">Word</label>
           <input type="text" name="wordWord" id="wordWord" required="true" />
         </div>
 
-         <!-- Input field for task name -->
+         
          <div class="form-row">
             <label for="wordLanguage">Language</label>
             <input type="text" name="wordLanguage" id="wordLanguage" required="true" />
           </div>
 
-            <!-- Dropdown select for task type -->
+            
             <div class="form-row">
             <label for="wordType">Word Type</label>
             <select name="wordType" id="wordType" required="true">
@@ -56,13 +59,13 @@
             </select>
              </div>
       
-        <!-- Input field for task client -->
+        
         <div class="form-row">
           <label for="wordDefinition">Definition</label>
           <input type="text" name="wordDefinition" id="wordDefinition" required="true" />
         </div>
 
-          <!-- Dropdown select for task type -->
+          
           <div class="form-row">
             <label for="wordCL">Confidence Level</label>
             <select name="wordCL" id="wordCL" required="true">
@@ -76,18 +79,25 @@
           </div>
     
 
-        <!-- Submit button to add task -->
+        
         <div class="form-row">
           <input type="submit" value="Add Word">
         </div>
       </form>
   
-      <!-- Section to display tasks -->
-      <h2>Word Bank</h2>
-      <ul id="taskList"></ul>
-    </div>
+      
+        <div id="wordListContainer">
+            <h2>Word Bank</h2>
+            <ul id="wordList"></ul>
+        </div>
+
+
   
-    <!-- JavaScript file for handling form submission and task display -->
+    </div>
+
+    
+  
+    
     <script src="script.js"></script>
   </body>
 </html>
