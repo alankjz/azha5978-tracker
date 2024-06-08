@@ -59,6 +59,19 @@ function displayTask(task) {
     form.reset();
 }
 
+// Function to save tasks to local storage
+function saveTasksToLocalStorage() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+// Function to load tasks from local storage
+function loadTasksFromLocalStorage() {
+  const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  tasks = storedTasks;
+  tasks.forEach(displayTask);
+}
+
+
 function logWord() {
     const word = document.querySelector('.search-input').value;
     if (word.trim() !== '') {
