@@ -59,26 +59,19 @@ function displayTask(task) {
     form.reset();
 }
 
-function saveTasksToLocalStorage(tasks) {
-  // Get the existing tasks from local storage
-  const newTask = JSON.parse(localStorage.getItem('newTasks')) || [];
-  // Add new task to the array
-  newTask.push(tasks);
-  // Save back to local storage
-  localStorage.setItem('newTask', JSON.stringify(newTask));
+// Function to save tasks to local storage
+function saveTasksToLocalStorage() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  console.log('Tasks saved to local storage:', tasks);
 }
 
-// Load tasks and display them
+// Function to load tasks from local storage
 function loadTasksFromLocalStorage() {
-  const newTask = JSON.parse(localStorage.getItem('newTask')) || [];
-  newTask.forEach(tasks => {
-      console.log(tasks); // Here you would typically create a list item for each task and display it in the UI
-  });
+  const storedTasks = JSON.parse(localStorage.getItem('tasks')) || {};
+  tasks = storedTasks;
+  Object.values(tasks).forEach(displayTask);
+  console.log('Tasks loaded from local storage:', tasks);
 }
-
-
-saveTasksToLocalStorage('test');
-loadTasksFromLocalStorage();
 
 
 function logWord() {
@@ -97,5 +90,7 @@ function logWord() {
 document.addEventListener('DOMContentLoaded', function() {
   const logButton = document.querySelector('.log-button');
   logButton.addEventListener('click', logWord);
+
+  loadTasksFromLocalStorage();
 });
 
