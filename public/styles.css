@@ -88,7 +88,7 @@ form {
 .logo{
   font-family: "JoSaItlaic"; 
   cursor: pointer;
-  font-size: 8em; 
+  font-size: 7em; 
   color: white;
   font-weight: bolder;
 }
@@ -179,7 +179,7 @@ h10 {
 
 #wordForm {
   width: 35em; 
-  height: 33.5em;
+  height: 34em;
   margin: 0 auto;
   border: 0.125em  solid #6F4E37; 
   border-radius: 1.25em;
@@ -243,7 +243,7 @@ h10 {
 
 #wordListContainer {
   width: 65em; 
-  height: 35.5em;
+  height: 36em;
   margin: 0 auto;
   border: 0.125em solid #6F4E37; 
   border-radius: 1.25em;
